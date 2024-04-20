@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title id="dynamicTitle"></title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+
+
+<body>
+    <h1>小学生自制的图片、音频软件</h1>
+    <h2>功能介绍：</h2>
+    <q>按下“跳转到 GitHub 页面”按钮就可以跳转到 GitHub 页面。资源就在那里，可以下载。</q>
+    <button onclick="window.location.href='https://github.com/laolizhennui/laolizhennui/tree/main'">跳转到 GitHub 页面</button>
+
+    <script>
+        // 存储多个背景图片的链接列表
+        var backgrounds = ["Background0.png", "Background1.png"]; // 添加更多背景图片链接
+
+        // 定时更换背景图片
+        var index = 0; // 当前背景图片的索引
+        function changeBackground() {
+        document.body.style.backgroundImage = "url('" + backgrounds[index] + "')";
+        index = (index + 1) % backgrounds.length;
+        }
+
+        // 定时器，每隔一分钟更换一次背景
+        setInterval(changeBackground, 30000); // 每隔半分钟（30秒）切换背景
+
+        var i = 0;
+        function updateTitle() {
+            var myString = "小学生自制的图片、音频软件。";
+            var x = 0 + i;
+            var y = x + 5;
+            if (y > myString.length) {
+                i = 0;
+                x = 0;
+                y = x + 5;
+            }
+            var extractedText = myString.substring(x, y);
+            document.getElementById("dynamicTitle").innerText = extractedText;
+            i++;
+            setTimeout(updateTitle, 350);
+        }
+
+        updateTitle();
+    </script>
+
+</body>
+
+</html>

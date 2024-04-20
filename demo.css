@@ -1,0 +1,44 @@
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 1s;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid green;
+  display: block;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+button:active {
+  background-color: #4caf50;
+  color: white;
+}
+
+h1 {
+  color: rgb(0, 200, 255);
+}
+
+h2 {
+  color: rgb(0, 255, 165);
+}
+
+q {
+  color: white;
+}
+
+body {
+  background-image: url("Background0.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 5s ease-in-out;
+}
